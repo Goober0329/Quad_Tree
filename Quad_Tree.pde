@@ -11,7 +11,7 @@ void setup() {
   Rectangle b = new Rectangle(width/2, height/2, width, height);
   qt = new QuadTree(b, 1);
 
-  numPoints = 5000;
+  numPoints = 1000;
   for (int i = 0; i < numPoints; i++) {
     qt.insert(new Point(random(width), random(height)));
   }
@@ -120,10 +120,10 @@ class Rectangle {
   }
 
   void show() {
-    //noFill();
-    //strokeWeight(1);
-    //stroke(255);
-    //rect(this.x, this.y, this.w, this.h);
+    noFill();
+    strokeWeight(1);
+    stroke(255);
+    rect(this.x, this.y, this.w, this.h);
   }
 }
 
